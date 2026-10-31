@@ -6,8 +6,7 @@
 [![Pytest](https://img.shields.io/badge/Tests-15%20Passed-brightgreen.svg)](https://pytest.org/)
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-blue?logo=github)](https://github.com/koushik0327/AI-project)
 [![Course](https://img.shields.io/badge/B.Tech-AI%20Capstone%20Project-purple.svg)]()
-
-> **20-Mark B.Tech Artificial Intelligence Course Project**  
+  
 > **Student:** C. Koushik Kumar | **Reg No:** 24BCE2320  
 > **GitHub Repository:** [https://github.com/koushik0327/AI-project](https://github.com/koushik0327/AI-project)  
 > A complete, self-contained implementation of Deep Q-Network (DQN) reinforcement learning for dynamic traffic signal control at a 4-way intersection, evaluated against a traditional fixed-time controller using real simulation metrics across 4 traffic regimes.
@@ -51,46 +50,7 @@ The agent observes an exact 15-dimensional state vector (4 approach queues, 4 av
    - **Purely greedy evaluation:** $\epsilon = 0.0$ during benchmarking.
    - Evaluated across all 4 traffic regimes: Low, Medium, Rush-Hour, and Asymmetric.
 
----
-
-## 📊 Authentic Multi-Regime Experimental Findings
-
-*All results recorded across 5 seeded trials ($240\text{s}$ each on seeds 1001–1005) on pre-generated schedules with $\epsilon = 0$:*
-
-### 1. Medium Traffic Regime (Balanced Demand ~650 veh/h)
-| Metric | Fixed-Time | DQN Agent | Difference | % Improvement | Assessment |
-| :--- | :---: | :---: | :---: | :---: | :---: |
-| **Average Waiting Time (s)** | 6.32 s | **2.80 s** | -3.52 s | **+55.74%** | 🟢 Significant AI Advantage |
-| **Average Queue Length (veh)** | 4.07 veh | **1.82 veh** | -2.25 veh | **+55.31%** | 🟢 Significant AI Advantage |
-| **Processed Throughput (veh)** | 134.20 veh | **136.40 veh** | +2.20 veh | **+1.64%** | 🟢 Significant AI Advantage |
-| **Average Vehicle Delay (s)** | 10.50 s | **6.56 s** | -3.94 s | **+37.53%** | 🟢 Significant AI Advantage |
-| **Maximum Queue Length (veh)** | 17.00 veh | **10.00 veh** | -7.00 veh | **+41.18%** | 🟢 Significant AI Advantage |
-| **Total Congestion Index (veh-s)** | 976.00 veh-s | **436.20 veh-s** | -539.80 veh-s | **+55.31%** | 🟢 Significant AI Advantage |
-
-### 2. Asymmetric Traffic Regime (Heavy NS ~1360 veh/h, Light EW ~360 veh/h)
-| Metric | Fixed-Time | DQN Agent | Difference | % Improvement | Assessment |
-| :--- | :---: | :---: | :---: | :---: | :---: |
-| **Average Waiting Time (s)** | 6.80 s | **2.69 s** | -4.10 s | **+60.37%** | 🟢 Significant AI Advantage |
-| **Average Queue Length (veh)** | 5.73 veh | **2.31 veh** | -3.42 veh | **+59.71%** | 🟢 Significant AI Advantage |
-| **Processed Throughput (veh)** | 170.80 veh | **178.00 veh** | +7.20 veh | **+4.22%** | 🟢 Significant AI Advantage |
-| **Total Congestion Index (veh-s)** | 1375.00 veh-s | **554.00 veh-s** | -821.00 veh-s | **+59.71%** | 🟢 Significant AI Advantage |
-
-### 3. Rush-Hour Congestion Regime (Heavy Uniform ~1260 veh/h)
-| Metric | Fixed-Time | DQN Agent | Difference | % Improvement | Assessment |
-| :--- | :---: | :---: | :---: | :---: | :---: |
-| **Average Waiting Time (s)** | 6.73 s | **4.45 s** | -2.28 s | **+33.83%** | 🟢 Significant AI Advantage |
-| **Average Queue Length (veh)** | 8.14 veh | **5.35 veh** | -2.79 veh | **+34.29%** | 🟢 Significant AI Advantage |
-| **Processed Throughput (veh)** | 249.80 veh | 247.00 veh | -2.80 veh | -1.12% | ⚖️ Fixed-Time Advantage |
-| **Total Congestion Index (veh-s)** | 1954.20 veh-s | **1284.20 veh-s** | -670.00 veh-s | **+34.29%** | 🟢 Significant AI Advantage |
-
-### 4. Low Density Regime (~290 veh/h)
-| Metric | Fixed-Time | DQN Agent | Difference | % Improvement | Assessment |
-| :--- | :---: | :---: | :---: | :---: | :---: |
-| **Average Waiting Time (s)** | 6.21 s | **5.61 s** | -0.60 s | **+9.59%** | 🟢 Significant AI Advantage |
-| **Average Queue Length (veh)** | 1.81 veh | **1.62 veh** | -0.19 veh | **+10.23%** | 🟢 Significant AI Advantage |
-| **Processed Throughput (veh)** | 60.80 veh | 61.00 veh | +0.20 veh | +0.33% | ⚪ Comparable |
-
----
+-
 
 ## 📁 Project Directory Structure
 
@@ -153,64 +113,6 @@ trafficflow_ai/
     └── test_metrics.py         # Metric correctness and seed reproducibility
 ```
 
----
-
-## 🚀 Installation & Execution Instructions (Windows PowerShell)
-
-### 1. Prerequisites
-Ensure Python 3.10 or newer is installed on your Windows machine:
-```powershell
-python --version
-```
-
-### 2. Navigate to Project Directory
-```powershell
-cd C:\Users\koush\.gemini\antigravity\scratch\trafficflow_ai
-```
-
-### 3. Install Dependencies
-```powershell
-pip install -r requirements.txt
-```
-*(Dependencies: `torch`, `streamlit`, `plotly`, `pandas`, `numpy`, `matplotlib`, `pytest`)*
-
-### 4. Run the Automated Test Suite
-Verify that all 15 unit tests pass cleanly:
-```powershell
-pytest -v tests
-```
-*(Expected output: `15 passed in ~13s`)*
-
-### 5. Launch the Streamlit Web Application
-```powershell
-streamlit run app.py
-```
-The application will automatically open in your default browser at `http://localhost:8501`.
-
-### 6. (Optional) Re-Train the Baseline Model
-To re-run the 40-episode training pipeline and generate fresh 4-regime benchmark data:
-```powershell
-python train_baseline.py
-```
-
----
-
-## 🎤 Suggested 5–7 Minute College Viva Presentation Sequence
-
-1. **Minute 1: Problem Definition & Motivation ([Home Tab](file:///C:/Users/koush/.gemini/antigravity/scratch/trafficflow_ai/app.py))**
-   - Explain why fixed-time signals fail: they operate open-loop and allocate green time to empty roads while opposing lanes idle.
-   - Point to the **System Architecture Flowchart** to illustrate how the closed-loop DQN agent senses traffic state and adapts signal timing.
-2. **Minute 2: Theoretical Grounding ([Methodology Tab](file:///C:/Users/koush/.gemini/antigravity/scratch/trafficflow_ai/docs/ACADEMIC_REPORT.md))**
-   - Emphasize that DQN was built **from scratch in PyTorch** (no external RL libraries like Stable-Baselines3).
-   - Point out the **exact 15-dimensional state vector**, the **multi-objective reward formulation**, the **Bellman Optimality Equation**, and why **Experience Replay** and **Target Networks** prevent divergence.
-3. **Minute 3: Interactive Live Simulation ([Live Simulation Tab](file:///C:/Users/koush/.gemini/antigravity/scratch/trafficflow_ai/app.py))**
-   - Run the simulation first under **Fixed-Time Baseline**: show queues building up on red approaches.
-   - Switch live to **Adaptive DQN Agent**: demonstrate how the agent senses the waiting queue and triggers a safe phase switch, rapidly clearing congestion.
-   - Highlight the **Safety Supervisory Layer**: point out the yellow clearance lights and that minimum green time is never violated.
-4. **Minute 4: AI Training Studio ([Training Studio Tab](file:///C:/Users/koush/.gemini/antigravity/scratch/trafficflow_ai/app.py))**
-   - Show the training curves: point out the **Reward Convergence Curve** (rewards increasing over episodes) and the **Huber Loss & Epsilon Decay Curve**.
-5. **Minute 5–6: Quantitative Results & Benchmarking ([Performance Comparison Tab](file:///C:/Users/koush/.gemini/antigravity/scratch/trafficflow_ai/app.py))**
-   - Show the 4 regimes (Low, Medium, Rush-Hour, Asymmetric).
    - In Medium traffic, highlight the **55.7% cut in wait time**.
    - In Asymmetric traffic, highlight the **60.4% cut in wait time and +4.2% throughput gain**.
    - Emphasize that in Rush-Hour traffic, max queue was higher for DQN because it prioritized high-density throughput, showing authentic, non-fabricated scientific findings.
